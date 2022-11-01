@@ -35,14 +35,15 @@ def add_message(sender, text):
 def send_message():
     sender = request.args['sender']
     text = request.args['text']
-    if 3 < len(sender) <= 100:
+    if 3 > len(sender) <= 100:
+        print('123')
         return '{"result": False, error: "Invalid Name"}'
-    else:
-        add_message(sender, text)
-    if 1 < len(text) <= 3000:
+    if 1 > len(text) <= 3000:
+        print('321')
         return '{"result": False, error: "Text should be >1 and <3000 char"}'
     else:
         add_message(sender, text)
+        print('message done')
     return {"result": True}
 
 
@@ -61,3 +62,4 @@ add_message("Oleg", "hello")
 add_message("User2", "Yes,hello")
 
 app.run()
+#тестирую гит
