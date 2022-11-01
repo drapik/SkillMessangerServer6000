@@ -58,7 +58,6 @@ def chat_info_page():
 
 
 add_message("Oleg", "hello")
-
 add_message("User2", "Yes,hello")
 
 app.run()
