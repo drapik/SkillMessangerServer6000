@@ -1,0 +1,67 @@
+html {
+    height: 100%;
+}
+body {
+    align-items: center;
+    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+    display: block;
+    font-family: 'Dosis', sans-serif;
+    font-display: swap;
+    justify-content: center;
+}
+
+.chat_box {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35,35,35,0.1);
+    color: #232323;
+    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.30);
+    border: 1px solid rgba(255,255,255,0.34);
+    margin-block: 19px;
+}
+
+#chat_window {
+    margin-left: 10px;
+}
+
+#text {
+    margin-bottom: 5px;
+}
+
+.text_window {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px)
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.01);
+    border-radius:16px;
+    box-shadow: 0 4px 30px rgba(35,35,35,0.1);
+    color: #232323;
+    font-size: 15px;
+    overflow: 20px;
+    text-align: center;
+    width: 326px;
+}
+
+.name_window {
+    margin-top: 5px;
+}
+
+.submit_button {
+    width: 90px;
+    height: 21px;
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px
+}
+.submit_button:active {
+    font-size: 13px;
+}

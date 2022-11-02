@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Skillbox Chat</title>
-
+    <title>OwlChat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     <!-- Подключение библиотеки jQuery-->
     <script
@@ -46,8 +47,12 @@
         }
 
         // При загрузке страницы
+        function sendmessageevent(){
+              sendMessage();
+           }
         $(() => {
            // При нажатии клавиш в поле текст
+
            $("#text").on("keypress", (event) => {
                 // При нажатии Enter, вызвать функцию sendMessage
                 if (event.keyCode == 13) {
@@ -63,12 +68,14 @@
 </head>
 <body>
     <!-- Интерфейс: имя, окно чата, текст сообщения -->
-    <b>Ваше Имя:</b>
-    <input id="name" type="text" placeholder="Ваше имя"/>
+    <div class="chat_box">
+        <div class="name_window"><center><b>Ваше Имя:</b> <input class="text_window" id="name" type="text" placeholder="Ваше имя"/></center></div>
 
-    <div id="chat_window"></div>
 
-    <br/>
-    <input id="text" type="text" placeholder="Текст сообщения">
+        <div id="chat_window"></div>
+
+        <br/>
+        <center><input class="text_window" id="text" type="text" placeholder="Текст сообщения"><button type="submit" class="submit_button" onclick="sendmessageevent();" id="send">Отправить</button></center>
+    </div>
 </body>
 </html>
